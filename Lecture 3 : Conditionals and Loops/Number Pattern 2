@@ -1,0 +1,51 @@
+Print the following pattern
+Pattern for N = 4
+       1
+     2 3
+   3 4 5
+ 4 5 6 7
+The dots represent spaces.
+
+Input Format :
+N (Total no. of rows)
+
+Output Format :
+Pattern in N lines
+
+Sample Input :
+5
+Sample Output :
+        1
+      2 3
+    3 4 5
+  4 5 6 7
+5 6 7 8 9
+The dots represent spaces.
+
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+int i, j, k, N;
+    cin>>N;
+
+    for(i=1; i<=N; i++)
+    {
+        k = i;
+
+        
+        for(j=i; j<N; j++)
+        {
+            cout<<" ";
+        }
+
+        // Logic to print numbers
+        for(j=1; j<=i; j++, k++)
+        {
+            cout<<k;
+        }
+
+        cout<<endl;
+    }
