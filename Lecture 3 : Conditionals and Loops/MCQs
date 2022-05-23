@@ -1,0 +1,69 @@
+1. #include <iostream>
+using namespace std;
+int main()
+{
+    int x = 5; 
+    if (x < 6)                            Output: Hello Hi.  First if condition is true, so "Hello " will be printed. After that, next if condition will be evaluated (as both if's are independent if's) which is again true. Hence, next "Hi " will be printed (obviously in same line). We won't go inside else, as if is already executed.
+        cout <<  “Hello ”;
+    if(x == 5){
+        cout << “Hi ”;
+    }
+    else { 
+        cout << “Hey ”;
+    } 
+}
+2. #include <iostream>
+using namespace std;
+int main() {
+    int x = 15;
+    if(x <= 15) {
+        cout << "Inside if ";           Output: Inside if 15. The condition inside if is true, hence statement "Inside if" will be printed. After that, we'll directly jump to statement : cout << x. So, after that 15 will be printed.
+    } else if(x == 15) {
+        cout << "Inside else if ";
+    }
+    cout << x;
+}
+3. #include <iostream>
+using namespace std; 
+int main()                             Output: 2. Inside if condition, we are doing if((var2 = 1) == var1), So first 1 will be assigned to var2 and then it'll be compared with var1. Before comparison, var2 = 1 and var1 = 5, which are not equal. So, we'll move to else part and there the value of (var2 + 1) i.e. 2 will be printed.
+{
+        int var1 = 5; 
+        int var2 = 6;
+        if ((var2 = 1) == var1)
+           cout << var2;
+        else 
+            cout  << (var2 + 1); 
+}
+4. For what values of the x is an if-statement block not executed ?
+       if((1+x) != (1-x)) {           
+          cout<<"In if block";         Output: 0. The if-statement block is only not executed when the value of x is  0. For all other values, it will be treated as true.
+         }
+5.  #include <iostream>
+using namespace std;
+int main() {
+    int a = 10, b = 20, c = 100;       Output: hello. In if condition, we are using logical OR operator ("||"). So if even one condition is true, final answer will be true
+    if(a <= b || c <= b) {
+        cout << "hello" << endl;
+    }
+    else if(a <= b || a <= c) {
+        cout << "hi" << endl;
+    }
+    else {
+        cout << "hey" << endl;
+    }
+} 
+6. #include <iostream>
+using namespace std;
+int main() {
+    int a = 10, b = 20, c = 30;
+    if(a <= b && !b) {                  Output: hi. a <= b evaluates to true, but !b evaluates to false (! operator negates the value, b is non-zero and hence !b becomes 0 which is false). For AND operator ("&&"), all the condition must be true. So we'll move to else if condition which evaluates to be true as both conditions (c >= a and c >= b) are true. Hence, "hi" will be printed.
+        cout << "hello";
+    }
+    else if(c >= a && c >= b) {
+        cout << "hi";
+    }
+    else {
+        cout << "hey";
+    }
+}
+7. 
