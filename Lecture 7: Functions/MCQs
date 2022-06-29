@@ -1,0 +1,78 @@
+1. What is the return type of a method that does not returns any value ?
+void
+The functions which doesn't return any value, their return type is "void". 
+2. Let’s say the problem is - You will be given two numbers(both integers) and you need to return their sum.
+For this problem, what should be the return type of function -int
+We need to return the sum of two integers, which is again an integer.
+So the sum that we want to return is of type "int". Hence return type should be "int" for this function.
+3.     void func(int a, int b){
+    cout << (a + b);
+    }
+
+    int main() {                                                   output: 19
+    int a = 7;
+    func(a, 12);
+    }
+4.   void demo(int a, int b){
+    cout << a << " " << b;
+}
+                                                                   output: compilation error
+int main() {
+    int a = 5;
+    int b = 15; 
+    demo(a);
+} 
+5. #include <iostream>
+using namespace std;
+void func(int a) {
+    int b = a;                                                    Error: yes
+    b = b + 10;
+}
+
+int main() {
+    int a = 10;
+    func(a);
+    cout << b << endl;
+}
+6. #include <iostream>
+using namespace std;
+
+void func(int a) {                                                Error: no
+    int b = 10;
+    a = b + 10;
+    cout << a << " ";
+}
+7.  void doubleValue(int a) {
+    a = a * 2;
+}
+int main() {
+    int a = 8;
+    doubleValue(a);                                              output: 8
+    cout << a;
+}
+8. int func(int a){
+    a += 10;
+    return a;
+}
+                                                                 output: 5
+int main() {
+    int a = 5;
+    func(a);
+    cout << a;
+}
+
+int main() {
+    int a = 10;
+    func(a);
+    cout << a << " ";
+}
+9. int square(int a){
+    int ans = a * a;
+    return ans;
+}
+
+int main() {                                                     output: 16
+    int a = 4;
+    a = square(a);
+    cout << a;
+}
